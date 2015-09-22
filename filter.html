@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>FILTER TEST</title>
+  <meta charset="UTF-8">
+</head>
+
+<style>
+
+.title{
+  color: #37A039;
+  font-family:"btp";
+  src: url("media/a_btp.ttf");
+  font-size: 28pt;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  .grid{
+    width: 1200px;
+    margin: 50px;
+  }
+
+  .total{
+    -webkit-filter: grayscale(100%) brightness(160%) contrast(85%);
+    filter: grayscale(1) brightness(1.4) contrast(0.9); /*FFOX*/
+    filter: gray; /* IE 6 - 9 */
+    -webkit-transition: .03s ease-in-out;
+    -moz-transition: .03s ease-in-out;
+    -o-transition: .03s ease-in-out;
+  }
+  .total:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0); /*FFOX*/
+  }
+
+  .img{
+    margin: 2px;
+    padding:1px;
+    position:absolute;
+  }
+  .noise{
+    margin: 2px;
+    padding:1px;
+    opacity: 0.2;
+  }
+  .noise:hover{
+    opacity: 0.05;
+  }
+
+  #container{
+    margin: 10px;
+     width:406px;
+     height:266px;
+     overflow:hidden;
+     background-color: #37A039;
+     display: inline-block;
+  }
+
+</style>
+
+<body>
+  <div class='title'> Hémisphère, Atelier de dispositifs numériques </div>
+    <div class="grid">
+        <div id="container">
+          <div class="total">
+            <img src="media/clav.jpg" class="img" height="260px" width="400px"/>
+            <img src="media/noisy.png" class="noise" height="260px" width="400px"/>
+          </div>
+        </div>
+        <div id="container">
+          <div class="total">
+            <img src="media/marine.jpg" class="img" height="260px" width="400px"/>
+            <img src="media/noisy.png" class="img noise" height="260px" width="400px"/>
+          </div>
+        </div>
+        <div id="container">
+          <div class="total">
+            <img src="media/dnc.jpg" class="img" height="260px" width="400px"/>
+            <img src="media/noisy.png" class="noise" height="260px" width="400px"/>
+          </div>
+        </div>
+        <div id="container">
+          <div class="total">
+            <img src="media/chrd.jpg" class="img" height="260px" width="400px"/>
+            <img src="media/noisy.png" class="img noise" height="260px" width="400px"/>
+          </div>
+        </div>
+        <div id="container">
+          <div class="total">
+            <img src="media/iac.png" class="img" height="260px" width="400px"/>
+            <img src="media/noisy.png" class="noise" height="260px" width="400px"/>
+          </div>
+        </div>
+
+    </div>
+</body>
+</html>
